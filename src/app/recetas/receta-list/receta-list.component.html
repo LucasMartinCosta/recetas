@@ -1,1 +1,26 @@
-<p>receta-list works!</p>
+<h1>BUSCADOR POR INGREDIENTES</h1>
+
+<form [formGroup]="formulario" (ngSubmit)="setIngredientes()"> 
+
+    <label for="ingredientes">Ingedientes: </label>
+    <input type="text" name="ingredientes" id="ingredientes" formControlName="ingredientes">
+
+    <button type="submit">Buscar</button>
+</form>
+
+
+@for (item of listaRecetas; track $index) {
+    {{item.title}}  <!-- aca se selecciona toda la info que queramos mostrar en la lista -->
+}
+
+
+
+
+<!-- lo que habria qe hacer es que por cada receta te muestre una carta con poca informacion  (para esto habria que hacer 
+ el componente carta como veniamos haciendo y pasarle la receta con un @input creo)
+ si nos gusta la receta hacemos clic en un boton que puede decir detalles y te abre toda la info de la receta que 
+ para eso podemos usar el otro metodo del servicio que se le pasa el id
+ 
+ en la carta tendria que haber un boton que dice agregar a una lista y eso te tendria que guardar la receta en una lista propia 
+ para eso hay que hacer mas cosas como un componente que sea de listas o algo asi, todavia no lo pense muy bien 
+ pero masomenos la estructura tendria que ser asi creo -->
