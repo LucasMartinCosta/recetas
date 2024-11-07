@@ -36,7 +36,7 @@ export class RecetaListComponent{
 
   //Devuelve recetas por ingredientes buscados, se le pasa un array con los ingredientes y la cantidad de respuestas que 
   //queres que te devuelva
-  listarRecetasPorIngredientes (ingredientes : string) { 
+  listarRecetasPorIngredientes (ingredientes : string) {
     this.servicio.getRecetasByIngredients(ingredientes, 5).subscribe({
       next : (data) => {
         console.log(ingredientes);

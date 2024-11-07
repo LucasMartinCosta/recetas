@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { environment } from '../../environments/environment.development';
-import { map, Observable } from 'rxjs';
+import { asapScheduler, map, Observable } from 'rxjs';
 import { RecipeInfo } from '../interfaces/recetas';
 
 @Injectable({
@@ -10,7 +10,6 @@ import { RecipeInfo } from '../interfaces/recetas';
 export class RecetasService {
 
   constructor() { }
-
   http = inject(HttpClient); 
   private key = environment.tokenLucas; 
 

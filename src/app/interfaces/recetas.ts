@@ -1,4 +1,18 @@
 
+export interface Receta {
+    vegetarian:               boolean;
+    vegan:                    boolean;
+    glutenFree:               boolean;
+    id:                       number;
+    title:                    string;
+    readyInMinutes:           number;
+    servings:                 number;
+    image:                    string;
+    instructions:             string;
+    spoonacularScore:         number;
+}
+
+
 export interface RecipeInfo {
     vegetarian:               boolean;
     vegan:                    boolean;
@@ -47,4 +61,11 @@ export interface Metric {
     unitShort: string;
     unitLong:  string;
 }
+
+
+export interface ListaRecetasPersonalizadas {
+    id ?: number;
+    nombre ?: string; // Nombre de la lista
+    recetas: RecipeInfo[]; // Array de recetas (puedes usar la interfaz que ya tienes para recetas)
+  }
 
